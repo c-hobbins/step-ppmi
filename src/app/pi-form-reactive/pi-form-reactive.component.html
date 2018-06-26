@@ -1,0 +1,134 @@
+<span><h2>Adult Simplified Renewal Passport Application</h2></span>
+<div class="container-fluid">
+  <form [formGroup]="piForm">
+    <div class="panel-group">
+  <div class="panel panel-primary">
+    <div class="panel-heading">Applicant Names</div>
+      <div formGroupName="names" class="panel-body">
+        <div formGroupName="primaryName" class="form-group">
+          <label class="center-block">Surname (last name)
+            <input class="form-control" formControlName="lastName">
+          </label>
+          <label class="center-block">Given Name(s)
+              <input class="form-control" formControlName="firstName">
+          </label>
+        </div>
+        <div formGroupName="birthName" class="form-group">
+          <label class="center-block">Surname (last name) at birth
+              <input class="form-control" formControlName="lastName">
+          </label>
+        </div>
+        <div formGroupName="formerName" class="form-group">
+            <label class="center-block">Former surname (last name)
+                <input class="form-control" formControlName="lastName">
+            </label>
+        </div>
+        <div formGroupName="maidenName" class="form-group">
+            <label class="center-block">Mother's maiden name (last name)
+                <input class="form-control" formControlName="lastName">
+            </label>
+        </div>
+      </div>
+  </div>
+  <div class="panel panel-default">
+      <div class="panel-heading">Place of Birth</div>
+      <div formGroupName="pob" class="form-group panel-body">
+          <label class="center-block">City
+            <input class="form-control" formControlName="city">
+          </label>
+          <label class="center-block">Country
+              <input class="form-control" formControlName="country">
+          </label>
+          <label class="center-block">Provice/State/Terr
+            <select class="form-control" formControlName="provstate">
+              <option *ngFor="let prov of provs" [value]="prov">{{prov}}</option>
+            </select>
+          </label>
+        </div>
+  </div>
+  <div class="panel panel-default">
+      <div class="panel-heading">Date of Birth</div>
+      <div formGroupName="dob" class="form-group panel-body">
+          <label class="center-block">Year
+            <input class="form-control" formControlName="year" placeholder='YYYY'>
+          </label>
+          <label class="center-block">Month
+              <input class="form-control" formControlName="month" placeholder='MM'>
+          </label>
+          <label class="center-block">Day
+              <input class="form-control" formControlName="day" placeholder='DD'>
+          </label>
+        </div>
+  </div>
+  <div class="panel panel-body">
+      <label class="center-block">Eye Colour
+        <input class="form-control" formControlName="eyeColor">
+      </label>
+      <div class="form-group radio">
+        <h4>Gender</h4>
+        <label class="center-block">
+          <input type="radio" class="form-check-input" 
+            formControlName="gender" value="Male">Male
+        </label>
+        <label class="center-block">
+            <input type="radio" class="form-check-input" 
+              formControlName="gender" value="Female">Female
+        </label>
+      </div>
+      <label class="center-block">Height
+          <input class="form-control" formControlName="height">
+      </label>
+  </div>
+</div>
+  <button (click)="addAddress()" type="button">Add Address</button>
+  <div class="well well-lg" formArrayName="addresses">
+    <div *ngFor="let addr of addresses.controls; let i = index" [formGroupName]="i">
+      <h4>Address #{{i+1}}</h4><br>
+      <div class="form-group">
+        <label class="center-block">Type:
+          <select class="form-control" formControlName="type">
+            <option *ngFor="let addrtype of addrTypeLovs" [value]="addrtype">{{addrtype}}</option>
+          </select>
+        </label>
+      </div>
+      <div class="form-group">
+        <label class="center-block">Street#:
+          <input class="form-control" formControlName="streetNum">
+        </label>
+      </div>
+      <div class="form-group">
+        <label class="center-block">StreeLine1:
+          <input class="form-control" formControlName="streetLine1">
+        </label>
+      </div>
+      <div class="form-group">
+        <label class="center-block">StreetLine2:
+          <input class="form-control" formControlName="streetLine2">
+        </label>
+      </div>
+      <div class="form-group">
+        <label class="center-block">City:
+          <input class="form-control" formControlName="city">
+        </label>
+      </div>
+      <div class="form-group">
+        <label class="center-block">Province:
+          <select class="form-control" formControlName="provstate">
+            <option *ngFor="let prov of provs" [value]="prov">{{prov}}</option>
+          </select>
+        </label>
+      </div>
+      <div class="form-group">
+        <label class="center-block">Postal Code:
+          <input class="form-control" formControlName="postzip">
+        </label>
+      </div>
+    </div>
+</div>
+
+</form>
+</div>
+<p>Form Value: {{ piForm.value | json }}</p>
+<p>Form Status: {{ piForm.status | json }}</p>
+<p>Client: {{ client | json }}</p>
+

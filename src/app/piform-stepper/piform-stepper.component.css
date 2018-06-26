@@ -1,0 +1,12 @@
+.goc-radio-mat-but{
+    margin: 3px; 
+}
+
+.goc-radio-mat-grp{
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.goc-mat-raised-but{
+    background-color: primary;
+}
