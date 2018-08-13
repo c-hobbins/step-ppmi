@@ -7,30 +7,30 @@
           <div class="panel-heading">Names</div>
           <div class="form-group panel-body">
             <div formGroupName="primaryName">
-              <mat-form-field appearance="outline">
+              <mat-form-field class="ircc-mat-input" appearance="outline">
                 <mat-label>Surname (last name)</mat-label>
                 <input matInput formControlName="lastName">
                 <mat-hint align="end">Family name (max 50 chars)</mat-hint>
               </mat-form-field><br>
-              <mat-form-field appearance="outline">
+              <mat-form-field class="ircc-mat-input" appearance="outline">
                 <mat-label>Given Name(s)</mat-label>
                 <input matInput formControlName="firstName">
               </mat-form-field>
             </div>
             <div formGroupName="birthName" class="form-group">
-              <mat-form-field appearance="outline">
+              <mat-form-field class="ircc-mat-input" appearance="outline">
                 <mat-label>Surname (last name) at birth</mat-label>
                 <input matInput formControlName="lastName">
               </mat-form-field>
             </div>
             <div formGroupName="formerName" class="form-group">
-              <mat-form-field appearance="outline">
+              <mat-form-field class="ircc-mat-input" appearance="outline">
                 <mat-label>Former surname (last name)</mat-label>
                 <input matInput formControlName="lastName">
               </mat-form-field>
             </div>
             <div formGroupName="maidenName" class="form-group">
-              <mat-form-field appearance="outline">
+              <mat-form-field class="ircc-mat-input" appearance="outline">
                 <mat-label>Mother's maiden name (last name)</mat-label>
                 <input matInput formControlName="lastName">
               </mat-form-field>
@@ -117,7 +117,7 @@
       <div class="panel panel-default">
           <div class="panel-heading">Phone Numbers</div>
           <div formGroupName="homeTel" class="form-group panel-body">
-            <mat-form-field appearance="outline">
+            <mat-form-field class="ircc-mat-input" appearance="outline">
               <mat-label>Home Phone</mat-label>
               <input matInput formControlName="phoneNum">
               <mat-icon matSuffix>phone</mat-icon>

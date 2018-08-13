@@ -14,10 +14,12 @@ import { MatStepperModule,
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PiformStepperComponent } from './piform-stepper/piform-stepper.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    PiformStepperComponent
+    PiformStepperComponent,
+    PiFormReactiveComponent
   ],
   imports: [
     BrowserModule,

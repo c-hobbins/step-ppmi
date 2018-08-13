@@ -1,6 +1,6 @@
 <span><h2>Adult Simplified Renewal Passport Application</h2></span>
 <div class="container-fluid">
-  <form [formGroup]="piForm">
+  <form [formGroup]="piNamesFG">
     <div class="panel-group">
   <div class="panel panel-primary">
     <div class="panel-heading">Applicant Names</div>
@@ -128,7 +128,5 @@
 
 </form>
 </div>
-<p>Form Value: {{ piForm.value | json }}</p>
-<p>Form Status: {{ piForm.status | json }}</p>
 <p>Client: {{ client | json }}</p>
 
