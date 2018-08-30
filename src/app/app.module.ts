@@ -27,7 +27,6 @@ import { LovService } from './services/lov.service';
   ],
   imports: [
     BrowserModule,
-    PdfViewerModule,
     FormsModule,
     ReactiveFormsModule,
     MatSelectModule,

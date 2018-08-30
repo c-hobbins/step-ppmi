@@ -11,6 +11,22 @@
     background-color: primary;
 }
 
-.ircc-mat-input{
+.ircc-mat-input-name{
+    width: 40%;
+}
+
+.ircc-mat-input-small{
+    width: 15%;
+}
+
+.ircc-mat-input-med{
+    width: 25%;
+}
+
+.ircc-mat-input-large{
     width: 50%;
+}
+
+.ircc-mat-input-date{
+    width: 8%;
 }
