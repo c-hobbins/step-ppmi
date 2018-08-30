@@ -15,7 +15,7 @@ import { MatStepperModule,
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PiformStepperComponent } from './piform-stepper/piform-stepper.component';
 // modules
-import { PdfViewerModule } from 'ng2-pdf-viewer';
+// import { PdfViewerModule } from 'ng2-pdf-viewer';
 // services
 import { LovService } from './services/lov.service';
 
